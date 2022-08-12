@@ -1,10 +1,9 @@
-# portfolio-project
+# CS 162 Portfolio-Project
 
-As with all user-defined classes in this course (all the ones that have any methods besides just an init method), all data members must be **private**.
 
-For this project you will write a class called ShipGame that allows two people to play the game [Battleship](https://en.wikipedia.org/wiki/Battleship_(game)). Each player has their own 10x10 grid they place their ships on. On their turn, they can fire a torpedo at a square on the enemy's grid. Player 'first' gets the first turn to fire a torpedo, after which players alternate firing torpedos. A ship is sunk when all of its squares have been hit. When a player sinks their opponent's final ship, they win.
+ A program called ShipGame that allows two people to play the game Battleship. Each player has their own 10x10 grid they place their ships on. On their turn, they can fire a torpedo at a square on the enemy's grid. Player 'first' gets the first turn to fire a torpedo, after which players alternate firing torpedos. A ship is sunk when all of its squares have been hit. When a player sinks their opponent's final ship, they win.
 
-The ShipGame class should have these methods:
+The ShipGame class has these methods:
 * an init method that has no parameters and sets all data members to their initial values
 * `place_ship` takes as arguments: the player (either 'first' or 'second'), the length of the ship, the coordinates of the square it will occupy that is closest to A1, and the ship's orientation - either 'R' if its squares occupy the same row, or 'C' if its squares occupy the same column (there are a couple of examples below). If a ship would not fit entirely on that player's grid, or if it would overlap any previously placed ships on that player's grid, or if the length of the ship is less than 2, the ship should not be added and the method should **return False**. Otherwise, the ship should be added and the method should **return True**. You may assume that all calls to place_ship() are made before any other methods are called (besides the init method, of course). You should not enforce turn order during the placement phase.
 * `get_current_state` returns the current state of the game: either 'FIRST_WON', 'SECOND_WON', or 'UNFINISHED'.
@@ -56,5 +55,3 @@ game.fire_torpedo('first', 'H3')
 game.fire_torpedo('second', 'A1')
 print(game.get_current_state())
 ```
-
-Your file must be named **ShipGame.py**
